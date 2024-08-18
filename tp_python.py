@@ -72,4 +72,60 @@ los siguientes dos minutos, 70¢ c/u, y a partir del décimo minuto, 50¢ c/u. A
 se carga un impuesto de 3 % cuando es domingo, y si es día hábil, en turno matutino, 
 15 %, y en turno vespertino, 10 %. Realice un algoritmo para determinar 
 cuánto debe pagar por cada concepto una persona que realiza una llamada.'''
+from datetime import datetime
+minutos = float(input("Ingrese la duración de la llamada en minutos: "))
+fecha_hora_str = input("Ingrese la fecha y hora de la llamada (YYYY-MM-DD HH:MM): ")
 
+def calcular_costo_llamada(minutos):
+    costo = 0
+
+
+    tarifas = {
+        'primeros_5': 1.00,
+        'siguientes_3': 80,
+        'siguientes_2': 70,
+        'primeros_10': 50
+    }
+    if minutos > 10:
+        costo = (minutos -10)* tarifas['primeros_10']
+        minutos = 10
+    elif minutos > 7:
+        costo = (minutos -7)* tarifas['siguientes_2']
+        minutos = 7
+    elif minutos > 5:
+        costo = (minutos -5)* tarifas['primeros_3']
+        minutos = 5
+    costo = minutos * tarifas['primeros_5']
+    print(costo)
+    
+def impuesto(fecha_hora):
+    dia_semana = fecha_hora.weekday()
+    hora = fecha_hora.hour
+    if dia_semana == 6:
+      return 0.03
+    elif hora < 12:
+        return 0.15
+    else:
+        return 0.10
+    
+fecha_hora = datetime.strptime(fecha_hora_str, "%Y-%m-%d %H:%M")
+costo = calcular_costo_llamada(minutos)
+impuesto_porcentaje = impuesto(fecha_hora)
+impuesto_total = (costo * impuesto_porcentaje)
+costo_final = (costo * impuesto_total)
+
+print(costo_final)
+'''
+4.) Realice un algoritmo para generar e imprimir los números pares que se 
+encuentran entre 0 y 100.
+'''
+'''
+def es_par():
+    
+    for numero in range(101):
+       
+        if numero % 2 == 0:
+            
+            print(numero)
+es_par()
+'''
