@@ -157,3 +157,37 @@ punto_encuentro = (diferencia_encuentro / 2)
 print (f'Las dos personas se encontraran en el kilometro {punto_encuentro}')
 
 # <------------------------------------------------------------------------->
+'''
+6.) La cadena de tiendas de autoservicio “El mandilón” cuenta con sucursa les en C 
+ciudades diferentes de la República, en cada ciudad cuenta con T tiendas y cada tienda
+cuenta con N empleados, asimismo, cada una regis tra lo que vende de manera individual
+cada empleado, cuánto fue lo que vendió cada tienda, cuánto se vendió en cada ciudad y
+cuánto recaudó la cadena en un solo día. Realice un algoritmo para determinar lo 
+anterior.'''
+
+
+cantidad_ciudades = int(input("Ingrese la cantidad de ciudades: "))
+cantidad_tiendas = int(input("Ingrese la cantidad de tiendas por ciudad: "))
+cantidad_empleados = int(input("Ingrese la cantidad de empleados por tienda: "))
+
+total_cadenas = 0
+
+for ciudad in range(cantidad_ciudades):
+    total_ciudad = 0
+    print(f"Ciudad {ciudad + 1}:")
+    
+    for tienda in range(cantidad_tiendas):
+        total_tienda = 0
+        print(f"Tienda {tienda + 1}:")
+        
+        for empleado in range(cantidad_empleados):
+            ventas_empleado = float(input(f"Ingrese el monto vendido por el empleado {empleado + 1}: "))
+            total_tienda += ventas_empleado
+        
+        print(f"Total vendido en la tienda {tienda + 1}: ${total_tienda}")
+        total_ciudad += total_tienda
+    
+    print(f"Total vendido en la ciudad {ciudad + 1}: ${total_ciudad}")
+    total_cadena += total_ciudad
+
+print(f"Total vendido en la cadena: ${total_cadena}")
