@@ -1,0 +1,3 @@
+variable = None
+
+print(variable)

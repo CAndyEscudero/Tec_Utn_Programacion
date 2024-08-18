@@ -73,28 +73,3 @@ se carga un impuesto de 3 % cuando es domingo, y si es día hábil, en turno mat
 15 %, y en turno vespertino, 10 %. Realice un algoritmo para determinar 
 cuánto debe pagar por cada concepto una persona que realiza una llamada.'''
 
-tarifas = {
-        'primeros_5': 1.00,
-        'siguientes_3': 0.80,
-        'siguientes_2': 0.70,
-        'posteriores': 0.50
-    }
-duracion_mins = 0
-costo = 0
-    
-if duracion_mins > 10:
-        
-    costo += (duracion_mins - 10) * tarifas['posteriores']
-    duracion_mins = 10
-if duracion_mins > 7:
-       
-    costo += (duracion_mins - 7) * tarifas['siguientes_2']
-    duracion_mins = 7
-if duracion_mins > 5:
-        
-    costo += (duracion_mins - 5) * tarifas['siguientes_3']
-    duracion_mins = 5
-    
-    costo += duracion_mins * tarifas['primeros_5']
-    
-print(costo) 
