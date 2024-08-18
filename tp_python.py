@@ -7,8 +7,10 @@ cuando es de tamaño 1; y 30¢ si es de tamaño 2. Si es de tipo B, se rebajan 3
 cuando es de tamaño 1, y 50¢ cuando es de tamaño 2. Realice un algoritmo para 
 determinar la ganancia obtenida y represéntelo mediante diagrama de flujo y su 
 correspondiente script(programa) en python.'''
+# < --------------------------------------------------------------------------- >
 
-'''while(True):
+ 
+while(True):
     try:
     
         kg_uvas = int(input("ingrese los kilos de uva: "))
@@ -33,8 +35,8 @@ correspondiente script(programa) en python.'''
 
     except: 
         print ('Debes ingresar valores correctos')
-'''
 
+# <------------------------------------------------------------------------->
 '''2.) El director de una escuela está organizando un viaje de estudios, y 
     requie re determinar cuánto debe cobrar a cada alumno y cuánto debe pagar a la
     compañía de viajes por el servicio. La forma de cobrar es la siguiente: si son 100 
@@ -42,7 +44,9 @@ correspondiente script(programa) en python.'''
     de $70.00, de 30 a 49, de $95.00, y si son menos de 30, el costo de la renta del autobús
     es de $4000.00, sin importar el número de alumnos. Entregar Diagrama de flujo y
     script en python.'''
-'''
+
+# <------------------------------------------------------------------------->
+
 try:
     cantidad_alumno = int(input('Ingrese la cantidad de Alumnos: '))
     costo_fijo = 4000
@@ -62,9 +66,11 @@ except:
     if cantidad_alumno == 0:
         print('Ingrese un numero mayor a 0')
     elif cantidad_alumno == '':
-        print('ingrese un numero')'''
-
+        print('ingrese un numero')
+        
+# <------------------------------------------------------------------------->
 '''
+
 3.) La política de la compañía telefónica “chimefón” es: “Chismea + x -”. 
 Cuando se realiza una llamada, el cobro es por el tiempo que ésta dura, de tal forma 
 que los primeros cinco minutos cuestan $ 1.00 c/u, los siguientes tres, 80¢ c/u, 
@@ -72,6 +78,9 @@ los siguientes dos minutos, 70¢ c/u, y a partir del décimo minuto, 50¢ c/u. A
 se carga un impuesto de 3 % cuando es domingo, y si es día hábil, en turno matutino, 
 15 %, y en turno vespertino, 10 %. Realice un algoritmo para determinar 
 cuánto debe pagar por cada concepto una persona que realiza una llamada.'''
+
+# <------------------------------------------------------------------------->
+
 from datetime import datetime
 minutos = float(input("Ingrese la duración de la llamada en minutos: "))
 fecha_hora_str = input("Ingrese la fecha y hora de la llamada (YYYY-MM-DD HH:MM): ")
@@ -115,11 +124,15 @@ impuesto_total = (costo * impuesto_porcentaje)
 costo_final = (costo * impuesto_total)
 
 print(costo_final)
+
+# <------------------------------------------------------------------------->
+
 '''
 4.) Realice un algoritmo para generar e imprimir los números pares que se 
 encuentran entre 0 y 100.
 '''
-'''
+# <------------------------------------------------------------------------->
+
 def es_par():
     
     for numero in range(101):
@@ -128,4 +141,19 @@ def es_par():
             
             print(numero)
 es_par()
+
+# <------------------------------------------------------------------------->
 '''
+5.) Una persona se encuentra en el kilómetro 70 de la carretera 
+Aguascalientes Zacatecas, otra se encuentra en el km 150 de la misma carretera,
+la primera viaja en dirección a Zacatecas, mientras que la segunda se dirige 
+a Aguasca lientes, a la misma velocidad. Realice un algoritmo para determinar en qué 
+kilometro de esa carretera se encontrarán '''
+
+distancia_a = 70
+distancia_b = 150
+diferencia_encuentro = (distancia_a - distancia_b)
+punto_encuentro = (diferencia_encuentro / 2)
+print (f'Las dos personas se encontraran en el kilometro {punto_encuentro}')
+
+# <------------------------------------------------------------------------->
