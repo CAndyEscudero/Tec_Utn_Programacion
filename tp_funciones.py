@@ -98,3 +98,37 @@ print(f"Salario: {salario}")
 Ejercicio 7: Reescribe el programa de calificaciones del capítulo anterior usando una función llamada calcula_calificacion, que reciba una
 puntuación como parámetro y devuelva una calificación como cadena'''
 
+
+def valores(valor):
+        calificacion=valor
+        while True:
+            while True:
+                b = input(valor)
+                try:
+                    valor = float(b) 
+                    break   
+                except :
+                    print("ingrese un numero valido")
+                    
+            if(float(b)<0) or (float(b)>1.0):
+                valor=calificacion
+                print("Ingrese un valor del 0.0 al 1")
+            else:
+                return valor
+def calcula_calificacion(nota):
+    if(nota>0.9):
+        print("Sobresaliente")
+    elif(nota>0.8):
+        print("Notable")
+    elif(nota>0.7):
+        print("Bien")
+    elif(nota>0.6):
+        print("Suficiente")
+    elif(nota<=0.6):
+        print("Insuficiente")
+    else:
+        print("error")
+
+while True:
+    nota=valores("notas: ")
+    nota=calcula_calificacion(nota)
