@@ -99,8 +99,8 @@ Ejercicio 7: Reescribe el programa de calificaciones del capítulo anterior usan
 puntuación como parámetro y devuelva una calificación como cadena'''
 
 
-def valores(valor):
-        calificacion=valor
+def valores(valor): 
+        calificacion = valor
         while True:
             while True:
                 b = input(valor)
@@ -111,7 +111,7 @@ def valores(valor):
                     print("ingrese un numero valido")
                     
             if(float(b)<0) or (float(b)>1.0):
-                valor=calificacion
+                valor = calificacion
                 print("Ingrese un valor del 0.0 al 1")
             else:
                 return valor
