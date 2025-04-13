@@ -39,11 +39,6 @@ main img {
     margin-bottom: 20px;
 }
 
-#search-form {
-    width: 100%;
-    max-width: 560px;
-}
-
 #search-input {
     width: 100%;
     max-width: 500px;
