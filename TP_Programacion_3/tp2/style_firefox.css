@@ -1,0 +1,89 @@
+body{
+    margin: 0%;
+    background-color: #2a3033;
+}
+.contenedor{
+    height: 100vh;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 35%;
+}
+.logo_cont{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.logo_cont img{
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+}
+h1{
+    color: aliceblue;
+    font-size: 50px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    align-items: center;
+}
+.barra{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 25%;
+}
+.barra_cont{
+    display: flex;
+    width: 50%;
+    height: 40px;
+}
+.barra button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #42414d;
+    width: 10%;
+    border: none;
+    border-radius: 20px 0 0 20px;
+}
+
+.svg_google {
+    height: 20px;
+}
+
+.barra input{
+    color: rgba(240, 248, 255, 0.425);
+    background-color: #42414d;
+    border: none;
+    width: 90%;
+    border-radius: 0 20px 20px 0;
+}
+.barra input:focus{
+    outline: none;
+}
+
+.footer{
+    height: 15%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.footer button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #42414d;
+    margin: 5px;
+    border-radius: 10px;
+}
+.footer button:hover{
+    background-color:#fbfbfe;
+}
