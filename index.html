@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de Alimento para Perros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Calculadora de alimento para tu perro</h1>
+
+    <div class="perros">
+      <div class="perro-card" data-tamaño="pequeño">
+        <img src="img/odie.jpeg" alt="Perro pequeño">
+        <p>Pequeño</p>
+      </div>
+      <div class="perro-card" data-tamaño="mediano">
+        <img src="img/Mia.jpeg" alt="Perro mediano">
+        <p>Mediano</p>
+      </div>
+      <div class="perro-card" data-tamaño="grande">
+        <img src="img/Rocko.jpeg" alt="Perro grande">
+        <p>Grande</p>
+      </div>
+    </div>
+
+    <div class="form">
+      <input type="number" id="peso" placeholder="Peso en kg" min="1">
+      <button id="calcularBtn">Calcular</button>
+    </div>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
